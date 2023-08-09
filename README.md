@@ -7,7 +7,7 @@ Blend Tree,
 Pooling System,
 JSON,
 NavMesh,
-
+Shader Graph,
 öğrenerek kullanmaya çalıştım.
 
 
