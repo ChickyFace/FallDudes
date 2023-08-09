@@ -21,11 +21,11 @@ public class PlayerController : MonoBehaviour
     private float? lastGroundTime;
     private float? jumpButtonPressedTime;
 
-    //[SerializeField] private CapsuleCollider capsuleCollider;
+    
     [SerializeField] private Rigidbody rigidbody;
     [SerializeField] private Transform cameraTransform;
 
-    //IsGround
+   
    // public LayerMask groundLayer; //gerek kalmadı Character Controller otomatik görüyor.
    // [SerializeField] private float groundCheckDistance;
 
@@ -58,11 +58,6 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    //ObstacleHit
-    //public bool CanMove { get; set; }
-
-    
-   
     private void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -73,10 +68,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
 
-      
             HandleMovement();
-
-        
 
     }
    

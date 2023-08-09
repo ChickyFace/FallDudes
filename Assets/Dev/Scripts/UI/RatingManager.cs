@@ -19,7 +19,6 @@ public class RatingManager : MonoBehaviour
     private List<OpponentData> opponentDataList;
 
     public float templateHeight = 40f;
-
     
     private void Awake()
     {
@@ -30,19 +29,13 @@ public class RatingManager : MonoBehaviour
         else
             RatingManager.instance = this;
 
-
         entryContainer = transform.Find("RankingEntryContainer");
         entryTemplate = entryContainer.Find("RankingEntryTemplate");
         entryTemplate.gameObject.SetActive(false);
-
         opponentDataList = new List<OpponentData>();
-
-
         StartCoroutine(PopulateOpponentDataList());
 
-
     }
-
     private IEnumerator PopulateOpponentDataList()
     {
         //Cycle through that object for sorting
@@ -67,7 +60,6 @@ public class RatingManager : MonoBehaviour
         }
         yield return new WaitForSeconds(0.5f);
     }
-
     private void CreateRankListEntryTransform(OpponentData opponentData, Transform container, List<Transform> transformList)
     {
         Transform entryTransform = Instantiate(entryTemplate, container);
@@ -97,9 +89,6 @@ public class RatingManager : MonoBehaviour
         transformList.Add(entryTransform);
        
     }
-
-
-
     private class OpponentClassObject
     {
         public List<OpponentData> opponentDataList;
