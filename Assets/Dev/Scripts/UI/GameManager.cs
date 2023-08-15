@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
         {
 
             startButton.gameObject.SetActive(false);
+            countdownText.gameObject.SetActive(true);
             timer -= Time.deltaTime;
             countdownText.text = Mathf.Ceil(timer).ToString();
 
@@ -52,8 +53,8 @@ public class GameManager : MonoBehaviour
 
                 
                 StartGame();
-                countdownText.text = "0";
-                countdownText.text = "";
+                //countdownText.text = "0";
+                //countdownText.text = "";
                 //countdownStarted = false;
                 //spawner.gameStart = true;
 
@@ -69,7 +70,7 @@ public class GameManager : MonoBehaviour
     }
     public void StartGame()
     {
-
+        countdownText.gameObject.SetActive(false);
         spawner.gameStart = true;
         Player.SetActive(true);
         countdownStarted = false;

@@ -207,6 +207,8 @@ public class PlayerLocomotion : MonoBehaviour
     {
         transform.position = checkPoint;
     }
+
+    //ObstacleHit
     public void HandleKnockBack()
     {
         if (isStuned)
@@ -237,7 +239,8 @@ public class PlayerLocomotion : MonoBehaviour
     {
         foreach (ContactPoint contact in collision.contacts)
         {
-            if (collision.gameObject.layer == LayerMask.NameToLayer("DynamicObstacle"))
+            if (collision.gameObject.layer == LayerMask.NameToLayer("DynamicObstacle") 
+                /*|| collision.gameObject.layer == LayerMask.NameToLayer("PendulumBall")*/)
             {
                 animatorManager.animator.SetBool("isStuned", true);
                 Debug.Log("hit");
