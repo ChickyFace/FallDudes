@@ -10,6 +10,7 @@ TagManager:
   - Green
   - Yellow
   - Red
+  - Cylinder
   layers:
   - Default
   - TransparentFX
@@ -21,9 +22,9 @@ TagManager:
   - DynamicObstacle
   - Player
   - RotatingPlatform
-  - 
-  - 
-  - 
+  - PendulumBall
+  - RotationX
+  - FinishDoor
   - 
   - 
   - 

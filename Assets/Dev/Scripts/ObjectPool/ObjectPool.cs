@@ -6,9 +6,6 @@ public class ObjectPool
 {
     private PoolableObject Prefab;
     private List<PoolableObject> AvailableObjects;
-
-   
-
     private ObjectPool(PoolableObject Prefab, int Size)
     {
         this.Prefab = Prefab;
@@ -18,7 +15,7 @@ public class ObjectPool
     {
         ObjectPool pool = new ObjectPool(Prefab, Size);
 
-        GameObject poolObject = new GameObject(Prefab.name + "Pool");
+        GameObject poolObject = new GameObject(Prefab.name + "Enemy");
 
         pool.CreateObjects(poolObject.transform, Size);
 
@@ -34,7 +31,6 @@ public class ObjectPool
         }
 
     }
-
     public void ReturnObjectToPool(PoolableObject poolableObject)
     {
         AvailableObjects.Add(poolableObject);
