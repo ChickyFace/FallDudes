@@ -35,17 +35,6 @@ public class AiSpawner : MonoBehaviour
 
 
     }
-
-    IEnumerator WaitHalfSecond()
-    {
-        //This is where you would put the code that needs to run before the delay
-
-       
-        yield return new WaitForSeconds(0.5f); // Wait for 0.5 seconds
-
-
-        //This is where you put the code that you want to run after the 0.5-second delay
-    }
     private void Update()
     {
         if (gameStart)

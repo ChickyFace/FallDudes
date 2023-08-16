@@ -23,12 +23,12 @@ public class GameManager : MonoBehaviour
     public Vector2 leaderboardWinPosition ; // middle of the screen
     public TextMeshProUGUI winLoseText;
     public GameObject winLosePanel;
-    AnimatorManager animatorManager;
+    public AnimatorManager animatorManager;
 
 
     private void Awake()
     {
-        animatorManager = FindObjectOfType<AnimatorManager>();
+      //  animatorManager = FindObjectOfType<AnimatorManager>();
     }
     private void Update()
     {
